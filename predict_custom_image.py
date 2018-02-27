@@ -16,11 +16,11 @@ x = io.imread(path_to_image).reshape((28, 28, 1)).astype(np.float) / 255
 
 result = model.predict([x])[0] # Predict
 
-prediction=0
-probability=result[0]
-for i in range(10):
+prediction = 0
+probability = result[0]
+for i in range (10):
     if probability < result[i]:
-        prediction=i
-        probability=result[i]
+        prediction = i
+        probability = result[i]
 
 print("Prediction:",prediction , "Probability %:",probability*100)

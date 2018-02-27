@@ -11,4 +11,5 @@ testX = testX.reshape([-1, 28, 28, 1])
 
 model.fit(X, Y, n_epoch=15, validation_set=(testX, testY), show_metric=True, run_id="deep_nn")
 
+# Saving Model saves us from retraining our model everytime we wish to run our project
 model.save('final-model.tflearn')

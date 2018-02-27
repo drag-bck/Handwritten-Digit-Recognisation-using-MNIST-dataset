@@ -16,12 +16,12 @@ x = testX[rand_index].reshape((28, 28, 1))
 
 result = model.predict([x])[0] # Predict
 
-prediction=0
-probability=result[0]
-for i in range(10):
+prediction = 0
+probability = result[0]
+for i in range (10):
     if probability < result[i]:
-        prediction=i
-        probability=result[i]
+        prediction = i
+        probability = result[i]
 
 
 #prediction = result.index(max(result)) # The index represents the number predicted in this case

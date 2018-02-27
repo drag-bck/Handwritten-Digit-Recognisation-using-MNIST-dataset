@@ -30,5 +30,6 @@ network = regression(network, optimizer='momentum',
 
 # The model with details on where to save
 # Will save in current directory
+# Saving Model saves us from retraining our model everytime we wish to run our project
 
 model = tflearn.DNN(network, checkpoint_path='model-', best_checkpoint_path='best-model-')
